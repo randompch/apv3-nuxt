@@ -1,0 +1,125 @@
+// Font Face
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-family: $font-family;
+      src: url('#{$file-path}');
+  }
+}
+// Media Queries Boostrap
+$bs-sm: 576px;
+$bs-md: 768px;
+$bs-lg: 992px;
+$bs-xl: 1200px;
+// Media Queries
+$imac-width: 2190px;
+$imac5k-width: 5120px;
+$tablet-width: $bs-md;
+$desktop-width: $bs-lg;
+$large-desktop-width: $bs-xl;
+@mixin small-mobile{
+  @media (max-width: #{$bs-sm - 1px}) {
+    @content;
+  }
+}
+@mixin mobile{
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet{
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px})  {
+    @content;
+  }
+}
+@mixin large-desktop{
+ @media (min-width: #{$large-desktop-width}) and (max-width: #{$imac-width - 1px}){
+   @content;
+ }
+}
+@mixin desktop-up{
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin imac {
+  @media (min-width: #{$imac-width}) {
+    @content;
+  }
+}
+@mixin imac5k {
+  @media (min-width: #{$imac5k-width}) {
+    @content;
+  }
+}
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+  background: $startColor;
+  background: -webkit-linear-gradient(to left, $startColor, $endColor);
+  background: -webkit-gradient(linear, right top, left top, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(right, $startColor, $endColor);
+  background: linear-gradient(to left, $startColor, $endColor);
+}
+
+@mixin background-image-gradient($url, $startColor: #3C3C3C, $endColor: #999999) {
+  background: $startColor;
+  background: url($url) no-repeat, -webkit-linear-gradient(to left, $startColor, $endColor);
+  background: url($url) no-repeat, -webkit-gradient(linear, right top, left top, from($startColor), to($endColor));
+  background: url($url) no-repeat, -webkit-linear-gradient(right, $startColor, $endColor);
+  background: url($url) no-repeat, linear-gradient(to left, $startColor, $endColor);
+  background-size: cover;
+}
+
+// $transition-property: color;
+// $transition-time: 0.3s;
+// $method: linear;
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin box_shadow ($level) {
+  @if $level == 1{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+    // Algolia Elevation 1
+  @else if $level == 6 {
+    box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+  }
+    // Algolia Elevation 2
+  @else if $level == 7 {
+    box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
+  }
+  // Algolia Elevation 2 bleu cdrp
+  @else if $level == 8 {
+    box-shadow: 0 16px 32px 0 rgba(0, 159, 227, 0.2);
+  }
+    // Algolia pricing elevation
+  @else if $level == 9 {
+    box-shadow: 0 5px 15px rgba(112,128,175,0.7);
+  }
+  // Fontawesome
+  @else if $level == 10 {
+    box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,.05);
+  }
+}

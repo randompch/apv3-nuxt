@@ -1,0 +1,43 @@
+/**
+  * ADN REALTY COLORS
+  */
+
+$apiTurquoise: #34d8cd;
+$apiBlue: #04a4fe;
+$apiGreyHeavy: #3E4348;
+$apiGreyMid: #8e8f92;
+$apiGreyLite: #d3d2dc;
+$apiGreen: #2eec96;
+
+$lrlv: #ff0032;
+$lvdf: #0575e6;
+$adnstudio: #FA4B72;
+$adnrealty: #00b0ff;
+$vorimmo: #3FC0F0;
+$citydrop: #f95c33;
+$bop: #4B0AA2;
+
+/**********************************/
+/**** MELANGE COULEURS PERSOS *****/
+/**********************************/
+
+$color-master: #000;
+
+$color-master-light:mix($color-master, #fff, 16%);
+$color-master-lighter:mix($color-master, #fff, 9.5%);
+$color-master-lightest:mix($color-master, #fff, 3%);
+
+$color-master-dark:mix($color-master, #fff, 45%);
+$color-master-darker:mix($color-master, #fff, 27%);
+$color-master-darkest:mix($color-master, #fff, 5%);
+
+$color-minor: #000;
+
+$color-minor-light:mix($color-minor, #fff, 26%);
+$color-minor-lighter:mix($color-minor, #fff, 9.5%);
+$color-minor-lightest:mix($color-minor, #fff, 3%);
+$color-minor-alt:mix($color-minor, #fff, 6%);
+
+$color-minor-dark:mix($color-minor, #000, 45%);
+$color-minor-darker:mix($color-minor, #000, 27%);
+$color-minor-darkest:mix($color-minor, #000, 18%);
