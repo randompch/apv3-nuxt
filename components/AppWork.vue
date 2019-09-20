@@ -41,15 +41,11 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'AppWork',
-  data () {
-    return {
-      msg: 'Hey',
-      show: false,
-    }
-  },
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class AppWork extends Vue {
 }
 </script>
 

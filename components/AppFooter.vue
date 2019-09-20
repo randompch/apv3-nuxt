@@ -17,23 +17,21 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'AppWork',
-  data () {
-    return {
-      social: [
-        { link: 'mailto:antoinepiche@gmail.com', text: 'Email me' },
-        { link: 'https://www.linkedin.com/in/antoinepiche/', text: 'Linkedin' },
-        { link: 'https://github.com/RandomPiche', text: 'Github' },
-        { link: 'https://medium.com/@randompiche', text: 'Medium' },
-        { link: 'https://antoine-piche.com/CV_ANTOINE_PICHE.pdf', text: 'Resume (FR)' },
-      ],
-    }
-  },
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class AppFooter extends Vue {
+  social: any[] = [
+    { link: 'mailto:antoinepiche@gmail.com', icon: 'fas fa-paper-plane' },
+    { link: 'https://www.linkedin.com/in/antoinepiche/', icon: 'fab fa-linkedin-in' },
+    { link: 'https://github.com/RandomPiche', icon: 'fab fa-github' },
+    { link: 'https://medium.com/@randompiche', icon: 'fab fa-medium' },
+    // { link: 'https://antoine-piche.com/CV_ANTOINE_PICHE.pdf', icon: 'fas fa-file' },
+    { link: 'https://dev.to/randompiche', icon: 'fab fa-dev' },
+  ]
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 </style>
