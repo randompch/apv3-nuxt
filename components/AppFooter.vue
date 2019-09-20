@@ -23,12 +23,12 @@ import { Component, Vue } from 'nuxt-property-decorator'
 @Component
 export default class AppFooter extends Vue {
   social: any[] = [
-    { link: 'mailto:antoinepiche@gmail.com', alt: 'Link to my email address', icon: 'fas fa-paper-plane' },
-    { link: 'https://www.linkedin.com/in/antoinepiche/', alt: 'Link to my Linkedin profile', icon: 'fab fa-linkedin-in' },
-    { link: 'https://github.com/RandomPiche', alt: 'Link to my Github profile', icon: 'fab fa-github' },
-    { link: 'https://medium.com/@randompiche', alt: 'Link to my Medium profile', icon: 'fab fa-medium' },
-    { link: 'https://dev.to/randompiche', alt: 'Link to dev.to profile', icon: 'fab fa-dev' },
-    { link: 'https://stackoverflow.com/users/7262921/randompiche?tab=profile', alt: 'Link to my StackOverflow profile', icon: 'fab fa-stack-overflow' },
+    { link: 'mailto:antoinepiche@gmail.com', alt: 'email address', icon: 'fas fa-paper-plane' },
+    { link: 'https://www.linkedin.com/in/antoinepiche/', alt: 'Linkedin profile', icon: 'fab fa-linkedin-in' },
+    { link: 'https://github.com/RandomPiche', alt: 'Github profile', icon: 'fab fa-github' },
+    { link: 'https://medium.com/@randompiche', alt: 'Medium profile', icon: 'fab fa-medium' },
+    { link: 'https://dev.to/randompiche', alt: 'Dev.to profile', icon: 'fab fa-dev' },
+    { link: 'https://stackoverflow.com/users/7262921/randompiche?tab=profile', alt: 'StackOverflow profile', icon: 'fab fa-stack-overflow' },
   ]
 }
 </script>
