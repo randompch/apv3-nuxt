@@ -99,7 +99,7 @@ footer{
             transition: color .2s ease-in-out, transform .2s ease-in-out;
             &:hover {
               color: $apiGreen;
-              transform: translateY(-5px);
+              transform: translateY(-3px);
               transition: color .2s ease-in-out, transform .2s ease-in-out;
             }
         }
