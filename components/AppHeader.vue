@@ -16,11 +16,11 @@
           <div class="col-12">
             <transition @enter="slide_down" @leave="slide_up">
               <p v-show="active" class="resume">
-                I've got my Baccalauréat ES with honours in 2012 and then started a <a href="https://humanites.parisnanterre.fr/" target="_blank" class="is-link is-link--green">licence "Humanités"</a> which basically brings five licences in one :
-                <br>Philosophy, French Letters, History, Latin and English. I've learnt many things during two years before realising that I wanted to learn coding.
-                <br>So I started a web school called <a href="https://www.iim.fr/" target="_blank" class="is-link is-link--green">Institut de l'Internet et du Multimédia</a> (IIM) based in Paris, La Défense, to become a digital project manager; but I prefer coding. More info on my <a href="https://www.linkedin.com/in/antoinepiche/" target="_blank" class="is-link is-link--green">linkedin</a>.
+                Right after getting my <i>Baccalauréat ES with honours</i> in 2012, I started following a licence called <a href="https://humanites.parisnanterre.fr/" target="_blank" class="is-link is-link--green">"Humanités"</a> which basically brings five licences in one : <strong>Philosophy, French Letters, History, Latin and English</strong>.
+                <br>I've learnt many things throughout my "Humanités" journey but I soon realised that I didn't see myself as a teacher or librairian.
+                <br>Internet has always had my attention and I felt like diving into it. I started coding my personnal website for fun and started a web school called <a href="https://www.iim.fr/" target="_blank" class="is-link is-link--green">Institut de l'Internet et du Multimédia</a> (IIM) based in Paris, La Défense. Though that school provides a formation to become a digital project manager, I prefer being a developer. More info on my <a href="https://www.linkedin.com/in/antoinepiche/" target="_blank" class="is-link is-link--green">linkedin</a>.
                 <br><br>Since then I've kept improving my skills by teaching myself through Medium articles, documentation reading and online courses.
-                <br>I'm really committed to my work, learning new things is what keeps me motivated. I'm currently working on my back-end skills (and loving it) and I keep practicing VueJS, of course.
+                <br>I'm really committed to my work, learning new things is what keeps me motivated. I'm currently working on my back-end skills (and loving it), I'm learning GOlang and I keep practicing VueJS, of course.
               </p>
             </transition>
             <a href="javascript:void(0)" class="is-link is-link--green readmore" @click="readMore">
