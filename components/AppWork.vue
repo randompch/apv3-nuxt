@@ -8,7 +8,7 @@
         <div class="col-12">
           <div class="featured-items">
             <div class="featured-item">
-              <a href="https://la-releve.com/" target="_blank" class="is-link is-link--lrlv"><span class="content">La Relève</span><span class="coming"> // Design UX/UI / Nuxt.js - Vue.js SSR - (Typescript / Vuex / Vue-Router / Axios +others) / Bootstrap 4.1.3 / SCSS / Node.js / AWS S3 + EB</span></a>
+              <a href="https://la-releve.com/" target="_blank" class="is-link is-link--lrlv"><span class="content">La Relève</span><span class="coming"> // Design UX/UI / Nuxt.js - Vue.js SSR - (Typescript / Vuex / Vue-Router / Axios + others) / Bootstrap 4.1.3 / SCSS / Node.js / Serverless</span></a>
             </div>
             <div class="featured-item">
               <a href="https://lvdf.io/" target="_blank" class="is-link is-link--lvdf"><span class="content">LVDF.io</span><span class="coming"> // Bootstrap 4.alpha-6 SCSS custom build / jQuery 3 / Symfony 3 / AWS EB</span></a>
