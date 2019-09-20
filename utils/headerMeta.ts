@@ -7,13 +7,13 @@ export type headerMetaData = {
 
 const defaultImage: string = '/images/fb_thumbnail.png'
 
-export function initHeaderMeta(headerData: headerMetaData): any[] {
+export function initHeaderMeta (headerData: headerMetaData): any[] {
   return [
     { hid: 'title', name: 'title', content: headerData.title || '' },
     { hid: 'description', name: 'description', content: headerData.description || '' },
     { hid: 'image', name: 'image', content: headerData.image || defaultImage },
-    { hid: 'author', name: 'author', content: 'la-releve' },
-    { hid: 'DC.publisher', name: 'DC.publisher', content: 'la-releve' },
+    { hid: 'author', name: 'author', content: 'Antoine Piché' },
+    { hid: 'DC.publisher', name: 'DC.publisher', content: 'Antoine Piché' },
     { hid: 'DC.format', name: 'DC.format', content: 'website' },
     { hid: 'DC.title', name: 'DC.title', content: headerData.title || '' },
     { hid: 'DC.image', name: 'DC.image', content: headerData.image || defaultImage },

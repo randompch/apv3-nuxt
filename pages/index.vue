@@ -8,18 +8,28 @@
   </div>
 </template>
 
-<script>
-import AppHeader from '@/components/AppHeader'
-import AppWork from '@/components/AppWork'
-import AppFooter from '@/components/AppFooter'
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import { initHeaderMeta } from '~/utils/headerMeta'
+import AppHeader from '~/components/AppHeader.vue'
+import AppWork from '~/components/AppWork.vue'
+import AppFooter from '~/components/AppFooter.vue'
 
-export default {
-  name: 'App',
+@Component({
   components: {
     AppHeader,
     AppWork,
     AppFooter,
   },
+  head () {
+    return {
+      htmlAttrs: { lang: 'en' },
+      title: 'Antoine Piché - FullStack Developer - Paris',
+      meta: initHeaderMeta({ title: `Antoine Piché - FullStack Developer - Paris`, description: `Antoine Piché is a FullStack Developer (Typescript) and VueJS enthusiast based in Paris` }),
+    }
+  },
+})
+export default class index extends Vue {
 }
 </script>
 
