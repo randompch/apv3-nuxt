@@ -83,18 +83,24 @@ footer{
     .copyright{
         color: $apiGreyMid;
         margin-bottom: 0;
+        font-size: rem(12px);
+        font-weight: $flite;
+        text-align: center;
     }
     .contactme{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         a{
-            font-size: rem(22px);
-            margin-top: 20px;
-            // color: $apiGreyMid;
-            &:not(:last-of-type){
-                margin-right: 30px;
+            font-size: rem(20px);
+            margin: 20px;
+            color: $apiGreyMid;
+            transition: color .2s ease-in-out, transform .2s ease-in-out;
+            &:hover {
+              color: $apiGreen;
+              transform: translateY(-5px);
+              transition: color .2s ease-in-out, transform .2s ease-in-out;
             }
         }
         

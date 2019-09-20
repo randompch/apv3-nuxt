@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-12">
           <div class="contactme">
-            <a v-for="(s, index) in social" :key="index" :href="s.link" class="is-link is-link--green">{{ s.text }}</a>
+            <a v-for="(s, index) in social" :key="index" :href="s.link"><i :class="s.icon" /></a>
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 justify-content-center">
           <p class="copyright">
             &copy; 2018 Antoine Piché - featured work from La Relève, U4Networks & ADN Realty
           </p>
