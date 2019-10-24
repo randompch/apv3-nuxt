@@ -6,10 +6,10 @@
           <div class="col-12">
             <h1>Hi! 👋 I'm Antoine Piché<span class="is-green">,</span></h1>
             <p>
-              a FullStack Developer (TS) & VueJS enthusiast based in Paris
+              a FullStack Developer (TypeScript) & VueJS enthusiast based in Paris
               <span class="is-grey-lite">
                 <br class="d-none d-md-block">currently working at <a href="https://la-releve.com" target="_blank" alt="La Relève website" aria-label="La Relève website" class="is-link is-link--green"><span class="content">La Relève</span></a>
-                <br class="d-none d-md-block">as a FullStack Developer (Nuxt.js, Express, MySQL, Serverless, GO)
+                <br class="d-none d-md-block">as a FullStack Developer (Nuxt.js, Express, MySQL, Serverless, Go)
               </span>
             </p>
           </div>
@@ -18,9 +18,9 @@
               <p v-show="active" class="resume">
                 Right after getting my <i>Baccalauréat ES with honours</i> in 2012, I started following a licence called <a href="https://humanites.parisnanterre.fr/" target="_blank" alt="Humanités Licence website" aria-label="Humanités Licence website" class="is-link is-link--green">"Humanités"</a> which basically brings five licences in one : <strong>Philosophy, French Letters, History, Latin and English</strong>.
                 <br>I've learnt many things throughout my "Humanités" journey but I soon realised that I didn't see myself as a teacher or librairian.
-                <br>Internet has always had my attention so I dove into it. I started coding my personal website for fun and soon began attending a web school called <a href="https://www.iim.fr/" target="_blank" alt="IIM website" aria-label="IIM website" class="is-link is-link--green">Institut de l'Internet et du Multimédia</a> (IIM) based in Paris, La Défense. Though that school provided a formation mainly focused on digital project management, I prefered programming. You'll find more info on my <a href="https://www.linkedin.com/in/antoinepiche/" target="_blank" alt="Linkedin profile" aria-label="Linkedin profile" class="is-link is-link--green">linkedin profile</a>.
-                <br><br>Since then I've kept improving my skills by teaching myself through Medium articles, documentation reading and online courses.
-                <br>I'm really committed to my work, learning new things is what keeps me motivated. I'm currently working on my back-end skills (and loving it), I'm learning GOlang and I keep working on Vue.js (or Nuxt.js), of course.
+                <br>Internet had always had my attention so I dove right into it. I started coding my personal website for fun and soon began attending a web school called <a href="https://www.iim.fr/" target="_blank" alt="IIM website" aria-label="IIM website" class="is-link is-link--green">Institut de l'Internet et du Multimédia</a> (IIM) based in Paris, La Défense. Though that school provided a formation mainly focused on digital project management, I prefered programming. You'll find more info on my <a href="https://www.linkedin.com/in/antoinepiche/" target="_blank" alt="Linkedin profile" aria-label="Linkedin profile" class="is-link is-link--green">linkedin profile</a>.
+                <br><br>Since then I've kept improving my skills by teaching myself through Medium articles, documentation reading and online courses (Udemy, Elephorm).
+                <br>I'm really committed to my work, learning new things is what really keeps me motivated and I'm obsessed with clean, readable and optimized code. I'm currently working on my back-end skills (and loving it), I'm learning Go and I keep working on Vue.js (or Nuxt.js), of course.
               </p>
             </transition>
             <a href="javascript:void(0)" class="is-link is-link--green readmore" @click="readMore">
