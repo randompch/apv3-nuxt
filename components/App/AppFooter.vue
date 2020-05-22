@@ -9,7 +9,7 @@
         </div>
         <div class="col-12 justify-content-center">
           <p class="copyright">
-            &copy; 2018 Antoine Piché - featured work from La Relève, U4Networks & ADN Realty
+            &copy; 2020 Antoine Piché - featured work from La Relève, U4Networks & ADN Realty
           </p>
         </div>
       </div>
@@ -22,7 +22,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class AppFooter extends Vue {
-  social: any[] = [
+  public social: any[] = [
     { link: 'mailto:antoinepiche@gmail.com', alt: 'email address', icon: 'fas fa-paper-plane' },
     { link: 'https://www.linkedin.com/in/antoinepiche/', alt: 'Linkedin profile', icon: 'fab fa-linkedin-in' },
     { link: 'https://github.com/RandomPiche', alt: 'Github profile', icon: 'fab fa-github' },
@@ -34,4 +34,42 @@ export default class AppFooter extends Vue {
 </script>
 
 <style lang="scss" scoped>
+footer {
+  padding: 20px 0 40px;
+  background-color: #fcfcfc;
+
+  .copyright {
+    color: $apiGreyMid;
+    margin-bottom: 0;
+    font-size: rem(12px);
+    font-weight: $flite;
+    text-align: center;
+  }
+
+  .contactme {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    a {
+      font-size: rem(20px);
+      padding: 20px;
+      color: $apiGreyMid;
+      transition: color .2s ease-in-out, transform .2s ease-in-out;
+
+      &:hover {
+        color: $apiGreen;
+        transform: translateY(-3px);
+        transition: color .2s ease-in-out, transform .2s ease-in-out;
+      }
+    }
+
+    @include mobile {
+      a {
+        padding: 15px;
+      }
+    }
+  }
+}
 </style>

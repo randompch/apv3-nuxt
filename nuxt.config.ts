@@ -5,50 +5,41 @@ import pwa from './modules/pwa'
 
 const config: Configuration = {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head,
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#2eec96' },
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+  styleResources: {
+    scss: ['@/assets/styles/scss/init.scss'],
+  },
   plugins: [
     { src: '~/plugins/velocity', ssr: false },
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxt/typescript-build',
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend (config: any, ctx: any) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient)
         config.module.rules.push({ enforce: 'pre', test: /\.(ts|js|vue)$/, loader: 'eslint-loader', exclude: /(node_modules)/ })
+    },
+
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+      },
     },
   },
   pwa,

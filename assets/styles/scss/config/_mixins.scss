@@ -23,6 +23,7 @@ $large-desktop-width: $bs-xl;
     @content;
   }
 }
+
 @mixin mobile{
   @media (max-width: #{$tablet-width - 1px}) {
     @content;

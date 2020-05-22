@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
-    <main>
-      <AppWork />
-    </main>
+    <AppWork />
     <AppFooter />
   </div>
 </template>
@@ -11,9 +9,9 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { initHeaderMeta } from '~/utils/headerMeta'
-import AppHeader from '~/components/AppHeader.vue'
-import AppWork from '~/components/AppWork.vue'
-import AppFooter from '~/components/AppFooter.vue'
+import AppHeader from '~/components/App/AppHeader.vue'
+import AppWork from '~/components/App/AppWork.vue'
+import AppFooter from '~/components/App/AppFooter.vue'
 
 @Component({
   components: {
@@ -29,12 +27,18 @@ import AppFooter from '~/components/AppFooter.vue'
     }
   },
 })
-export default class index extends Vue {
-}
+export default class index extends Vue {}
 </script>
 
 <style lang="scss">
-@import '@/assets/styles/scss/init.scss';
+html,
+body {
+  font-family: $gfont;
+  margin: 0;
+  color: $apiGreyHeavy !important;
+
+}
+
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
