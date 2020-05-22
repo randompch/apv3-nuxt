@@ -34,6 +34,13 @@ $large-desktop-width: $bs-xl;
     @content;
   }
 }
+// For tablets and all the way down
+@mixin tabdown {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin desktop{
   @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px})  {
     @content;
@@ -44,11 +51,13 @@ $large-desktop-width: $bs-xl;
    @content;
  }
 }
-@mixin desktop-up{
+
+@mixin deskup {
   @media (min-width: #{$desktop-width}) {
     @content;
   }
 }
+
 @mixin imac {
   @media (min-width: #{$imac-width}) {
     @content;

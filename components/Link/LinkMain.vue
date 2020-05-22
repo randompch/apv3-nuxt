@@ -191,17 +191,4 @@ export default class LinkMain extends Vue {
     }
   }
 }
-
-.is-green {
-  color: $apiGreen;
-}
-
-.is-grey-lite {
-  color: $apiGreyMid;
-
-  a {
-    color: $apiGreyMid;
-  }
-}
-
 </style>

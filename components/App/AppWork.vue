@@ -38,7 +38,7 @@ export default class AppWork extends Vue {
       title: 'La Relève',
       url: 'https://la-releve.com',
       color: 'lrlv',
-      details: '// Design UX/UI / Nuxt.js - (Typescript / Vuex / Vue-Router / Axios + others) / Bootstrap 4.1.3 (custom build) / SCSS / Express / Serverless',
+      details: '// Design UX/UI / Nuxt.js - (Typescript / Vuex / Vue-Router / Axios + others) / Bootstrap 4.1.3 / SCSS / Express / Serverless',
     },
     {
       title: 'LVDF.io',

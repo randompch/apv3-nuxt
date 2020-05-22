@@ -1,16 +1,6 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 
-/**
- * CSS rules actually used in La Relève
- *
- * Please COPY the the rules you want to use in the massive list commented below
- * and then PASTE it in the actual list of available icons.
- * DO NOT CUT & PASTE to keep the original package clean.
- * I've reduced the package to its core build to ensure that no extra css is loaded (I just cannot split the font files obviously lul).
- * - Antoine
- */
-
 .#{$fa-css-prefix}-paper-plane:before { content: fa-content($fa-var-paper-plane); }
 .#{$fa-css-prefix}-linkedin-in:before { content: fa-content($fa-var-linkedin-in); }
 .#{$fa-css-prefix}-github:before { content: fa-content($fa-var-github); }

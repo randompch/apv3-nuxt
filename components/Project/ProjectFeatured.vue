@@ -57,7 +57,7 @@ export default class ProjectFeatured extends Vue {
     }
   }
 
-  @media (max-width: 767px) {
+  @include tabdown {
     span.details {
       display: none;
     }
