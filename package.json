@@ -17,19 +17,20 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "~2.0.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.14.12",
     "nuxt-property-decorator": "^2.7.2",
     "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.8",
-    "@nuxt/typescript-runtime": "^0.4.7",
+    "@nuxt/typescript-build": "~2.0.3",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.2.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxt/types": "2.14.11",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-nuxt": "^0.5.2",

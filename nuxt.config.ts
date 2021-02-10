@@ -4,8 +4,9 @@ import head from './modules/head'
 import pwa from './modules/pwa'
 
 const config: Configuration = {
-  mode: 'universal',
+  target: 'static',
   head,
+  components: true,
   loading: { color: '#2eec96' },
   styleResources: {
     scss: ['@/assets/styles/scss/init.scss'],
