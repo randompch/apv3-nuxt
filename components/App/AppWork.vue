@@ -38,7 +38,7 @@ export default class AppWork extends Vue {
       title: 'La Relève',
       url: 'https://la-releve.com',
       color: 'lrlv',
-      details: '// Design UX/UI / Nuxt.js - (Typescript / Vuex / Vue-Router / Axios + others) / Bootstrap 4.1.3 / SCSS / Express / Serverless',
+      details: '// Design UX/UI / Nuxt.js (Typescript) / Serverless / Terraform',
     },
     {
       title: 'LVDF.io',
@@ -81,12 +81,6 @@ export default class AppWork extends Vue {
       url: 'https://www.vor-immobilier.fr',
       color: 'vorimmo',
       details: '// Bootstrap 4.1 SCSS custom build / jQuery 3',
-    },
-    {
-      title: 'Custom tech news review tool',
-      url: 'http://vue.antoine-piche.com',
-      color: 'alt',
-      details: '// Vue.js (Axios) / Boostrap 3.3.7 / Newsapi.org',
     },
   ]
 }

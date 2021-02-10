@@ -9,7 +9,7 @@
         </div>
         <div class="col-12 justify-content-center">
           <p class="copyright">
-            &copy; 2020 Antoine Piché - featured work from La Relève, U4Networks & ADN Realty
+            featured work from La Relève & ADN Realty
           </p>
         </div>
       </div>
