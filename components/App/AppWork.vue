@@ -8,7 +8,7 @@
           </div>
           <div class="col-12">
             <div class="featured-projects">
-              <project-featured
+              <ProjectFeatured
                 v-for="(project, index) in projects"
                 :key="index"
                 :project="project"

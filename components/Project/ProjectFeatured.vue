@@ -1,6 +1,6 @@
 <template>
   <div class="featured-project">
-    <link-main
+    <LinkMain
       :href="project.url"
       :classes="[`${project.color}`]"
       :alt="project.title"
@@ -9,7 +9,7 @@
       <span
         class="details"
       >{{ project.details }}</span>
-    </link-main>
+    </LinkMain>
   </div>
 </template>
 
@@ -17,13 +17,7 @@
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
 import { Project } from '~/types/project'
 
-import LinkMain from '~/components/Link/LinkMain.vue'
-
-@Component({
-  components: {
-    LinkMain,
-  },
-})
+@Component
 export default class ProjectFeatured extends Vue {
   @Prop({ type: Object, default: () => ({}) }) project: Project
 }

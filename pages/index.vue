@@ -9,16 +9,8 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { initHeaderMeta } from '~/utils/headerMeta'
-import AppHeader from '~/components/App/AppHeader.vue'
-import AppWork from '~/components/App/AppWork.vue'
-import AppFooter from '~/components/App/AppFooter.vue'
 
 @Component({
-  components: {
-    AppHeader,
-    AppWork,
-    AppFooter,
-  },
   head () {
     return {
       htmlAttrs: { lang: 'en' },
