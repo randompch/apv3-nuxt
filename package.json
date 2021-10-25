@@ -5,10 +5,10 @@
   "author": "randompiche",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate --modern",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate --modern",
     "deploy:staging": ". ./.deploy/build-staging.sh",
     "deploy:prod": ". ./.deploy/build-production.sh",
     "test": "jest",
@@ -17,7 +17,6 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "~2.0.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
@@ -35,6 +34,6 @@
     "eslint": "^6.8.0",
     "eslint-plugin-nuxt": "^0.5.2",
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^10.1.1"
   }
 }
