@@ -10,13 +10,13 @@
               <span class="is-grey-lite">
                 <br class="d-none d-md-block">currently working
                 <LinkMain
-                  href="https://la-releve.com"
-                  alt="La Relève website"
+                  href="https://www.liberkeys.com"
+                  alt="Liberkeys website"
                   :classes="['green']"
                 >
-                  <span class="content">@La&nbsp;Relève</span>
+                  <span class="content">@Liberkeys</span>
                 </LinkMain>
-                <br class="d-none d-md-block">with Nuxt.js, Express, MySQL and Serverless.
+                <br class="d-none d-md-block">with Vue 2/3, Nuxt, Node and Go.
               </span>
             </p>
           </div>

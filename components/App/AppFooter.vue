@@ -4,7 +4,16 @@
       <div class="row">
         <div class="col-12">
           <div class="contactme">
-            <a v-for="(s, index) in social" :key="index" :href="s.link" :alt="s.alt" :aria-label="s.alt" target="_blank"><i :class="s.icon" /></a>
+            <a
+              v-for="(s, index) in social"
+              :key="index"
+              :href="s.link"
+              :alt="s.alt"
+              :aria-label="s.alt"
+              target="_blank"
+            >
+              <i :class="s.icon" />
+            </a>
           </div>
         </div>
         <div class="col-12 justify-content-center">
@@ -29,7 +38,7 @@ export default class AppFooter extends Vue {
     { link: 'https://medium.com/@randompiche', alt: 'Medium profile', icon: 'fab fa-medium' },
     { link: 'https://dev.to/randompiche', alt: 'Dev.to profile', icon: 'fab fa-dev' },
     { link: 'https://stackoverflow.com/users/7262921/randompiche?tab=profile', alt: 'StackOverflow profile', icon: 'fab fa-stack-overflow' },
-  ]
+  ];
 }
 </script>
 

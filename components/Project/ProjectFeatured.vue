@@ -26,6 +26,11 @@ export default class ProjectFeatured extends Vue {
 <style lang="scss" scoped>
 .featured-project {
   margin-bottom: 20px;
+
+  ::v-deep .link {
+    font-size: rem(40px);
+  }
+
   span.details {
     color: #8e8f92;
     margin-left: 5px;
