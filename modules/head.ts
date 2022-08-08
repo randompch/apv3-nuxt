@@ -36,4 +36,4 @@ export default {
       href: '/images/favicon.png?v=1',
     },
   ],
-}
+};

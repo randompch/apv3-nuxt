@@ -2,39 +2,127 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
-  },
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: false
-    }
-  },
-  env: {
-    es6: true
+    node: true,
   },
   extends: [
-    '@nuxtjs'
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
   ],
+  parserOptions: {
+    ecmaVersion: 2022,
+  },
+  plugins: [],
   rules: {
-    'vue/max-attributes-per-line': 'off', // I don't want my html tag directives to take 20 lines...
-    'vue/singleline-html-element-content-newline': 'off', // I sometimes prefer to write a few tags on the same line (e.g. svgs in link)
-    'vue/attribute-hyphenation': 'off', // Just a habit, no big deal
-    'no-return-assign': 'off', // Let me assign values in my returns ffs
-    'curly': ['error', 'multi-or-nest'],
-    'comma-dangle': ['error', 'always-multiline'], // To avoid committing a new line for a comma when adding an key/value pair to a mutliline object or array
-    'camelcase': 'off', // Just a habit again
-    'no-console': 'off', // Let me console.log whatever I want :3
-    'vue/no-v-html': 'off' // I know it can lead to XSS attack but we've got no other choice, plus the user has no easy access to the data populated in these v-html directives.
+    // Typescript
+    '@typescript-eslint/array-type': ['error', {
+      array: true,
+    }],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/naming-convention': ['error', {
+      selector: 'enum',
+      format: ['PascalCase'],
+      custom: {
+        regex: '^E[A-Z]',
+        match: true,
+      },
+    },
+    {
+      selector: 'interface',
+      format: ['PascalCase'],
+      custom: {
+        regex: '^I[A-Z]',
+        match: false,
+      },
+    }],
+    '@typescript-eslint/no-empty-interface': ['error', {
+      allowSingleExtends: true,
+    }],
+    '@typescript-eslint/no-inferrable-types': ['error', {
+      ignoreProperties: true,
+      ignoreParameters: true,
+    }],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/semi': ['error'],
+    '@typescript-eslint/typedef': ['error', {
+      arrowParameter: false,
+    }],
+    '@typescript-eslint/member-delimiter-style': 'error',
+    'arrow-parens': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    indent: ['error', 2, {
+      SwitchCase: 1,
+    }],
+    'import/no-unresolved': ['error', {
+      ignore: ['.svg'],
+    }],
+    'keyword-spacing': 'error',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'operator-linebreak': ['error', 'before'],
+    'padding-line-between-statements': ['error', {
+      blankLine: 'always',
+      prev: '*',
+      next: 'return',
+    }],
+    'quote-props': ['error', 'as-needed'],
+    semi: [2, 'always'],
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always',
+    }],
+    // Vue rules
+    'vue/attribute-hyphenation': ['error', 'always'],
+    'vue/attributes-order': ['error', {
+      order: [
+        'SLOT',
+        'DEFINITION',
+        'LIST_RENDERING',
+        'CONDITIONALS',
+        'RENDER_MODIFIERS',
+        'GLOBAL',
+        'UNIQUE',
+        'TWO_WAY_BINDING',
+        'OTHER_DIRECTIVES',
+        'OTHER_ATTR',
+        'EVENTS',
+        'CONTENT',
+      ],
+      alphabetical: true,
+    }],
+    'vue/block-tag-newline': 'error',
+    'vue/custom-event-name-casing': ['error', 'kebab-case'],
+    'vue/eqeqeq': 'error',
+    'vue/html-button-has-type': 'error',
+    'vue/max-len': ['error', {
+      code: 150,
+      template: 200,
+      comments: 120,
+      ignoreComments: true,
+      ignoreHTMLAttributeValues: true,
+    }],
+    'vue/no-empty-component-block': 'error',
+    'vue/no-lone-template': 'error',
+    'vue/no-mutating-props': 'error',
+    'vue/no-potential-component-option-typo': 'error',
+    'vue/no-useless-concat': 'error',
+    'vue/no-useless-mustaches': 'error',
+    'vue/no-v-html': 'off',
+    'vue/object-curly-spacing': ['error', 'always'],
+    'vue/script-indent': 'error',
+    'vue/v-on-event-hyphenation': 'error',
+    'vue/v-on-function-call': 'error',
   },
   overrides: [
     {
-      files: ['*.ts', '*.vue', '*.js'],
+      files: ['*.ts'],
       rules: {
-        '@typescript-eslint/no-unused-vars': [2, { args: 'none' }] // Prevent eslint-loader from declaring interfaces as unused vars
-      }
-    }
-  ]
-}
+        '@typescript-eslint/explicit-function-return-type': ['error', {
+          allowExpressions: true,
+        }],
+      },
+    },
+  ],
+};

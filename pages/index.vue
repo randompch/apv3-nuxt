@@ -7,19 +7,21 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { initHeaderMeta } from '~/utils/headerMeta'
+import Vue from 'vue';
+import { initHeaderMeta } from '~/utils/headerMeta';
 
-@Component({
-  head () {
+export default Vue.extend({
+  head() {
     return {
       htmlAttrs: { lang: 'en' },
       title: 'Antoine Piché - FullStack Developer - Paris',
-      meta: initHeaderMeta({ title: `Antoine Piché - FullStack Developer - Paris`, description: `Antoine Piché is a FullStack Developer (Typescript) and VueJS enthusiast based in Paris` }),
-    }
+      meta: initHeaderMeta({
+        title: 'Antoine Piché - FullStack Developer - Paris',
+        description: 'Antoine Piché is a FullStack Developer (Typescript) and VueJS enthusiast based in Paris',
+      }),
+    };
   },
-})
-export default class index extends Vue {}
+});
 </script>
 
 <style lang="scss">

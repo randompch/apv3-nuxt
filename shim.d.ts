@@ -1,7 +1,7 @@
 declare module 'webpack-hot-middleware' {
-  const middleware: any
+  const middleware: any;
   export interface Options {
-    [proName: string]: any
+    [proName: string]: any;
   }
-  export default middleware
+  export default middleware;
 }

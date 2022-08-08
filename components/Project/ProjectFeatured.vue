@@ -1,33 +1,37 @@
 <template>
   <div class="featured-project">
-    <LinkMain
-      :href="project.url"
-      :classes="[`${project.color}`]"
+    <BaseLink
       :alt="project.title"
+      :classes="[`${project.color}`]"
+      :href="project.url"
     >
       <span class="title">{{ project.title }}</span>
       <span
         class="details"
       >{{ project.details }}</span>
-    </LinkMain>
+    </BaseLink>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import { Project } from '~/types/project'
+import Vue, { PropType } from 'vue';
+import { Project } from '~/types/project';
 
-@Component
-export default class ProjectFeatured extends Vue {
-  @Prop({ type: Object, default: () => ({}) }) project: Project
-}
+export default Vue.extend({
+  props: {
+    project: {
+      type: Object as PropType<Project>,
+      required: true,
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>
 .featured-project {
   margin-bottom: 20px;
 
-  ::v-deep .link {
+  :deep(.link) {
     font-size: rem(40px);
   }
 
@@ -63,7 +67,7 @@ export default class ProjectFeatured extends Vue {
   }
 }
 
-/deep/ .link {
+:deep(.link) {
   font-size: rem(40px);
 }
 </style>

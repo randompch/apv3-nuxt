@@ -1,10 +1,10 @@
 <template>
   <a
-    :href="href"
-    :target="target"
-    :class="['link', ...classes]"
     :alt="alt"
     :aria-label="alt"
+    :class="['link', ...classes]"
+    :href="href"
+    :target="target"
     @click.prevent="handler"
   >
     <slot />
@@ -12,25 +12,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import Vue, { PropType } from 'vue';
 
-@Component
-export default class LinkMain extends Vue {
-  @Prop({ type: String, default: '' }) href: string
-  @Prop({ type: String, default: '' }) alt: string
-  @Prop({ type: Boolean, default: true }) blank: boolean
-  @Prop({ type: Array, default: () => ['green'] }) classes: any[]
+export default Vue.extend({
+  props: {
+    href: {
+      type: String,
+      default: '',
+    },
+    alt: {
+      type: String,
+      default: '',
+    },
+    blank: {
+      type: Boolean,
+      default: true,
+    },
+    classes: {
+      type: Array as PropType<string[]>,
+      default: () => ['green'],
+    },
+  },
+  computed: {
+    target(): string {
+      return this.blank ? '_blank' : '';
+    },
+  },
+  methods: {
+    handler(): void {
+      if (this.href) {
+        window.open(this.href, this.blank ? '_blank' : '');
+      }
 
-  public get target (): string {
-    return this.blank ? '_blank' : ''
-  }
-
-  public handler (): void {
-    if (this.href)
-      window.open(this.href, this.blank ? '_blank' : '')
-    this.$emit('link-click')
-  }
-}
+      this.$emit('link-click');
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>

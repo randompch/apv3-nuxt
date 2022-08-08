@@ -1,11 +1,11 @@
 const manifest = {
   name: 'Antoine Piché',
   short_name: 'Antoine Piché',
-  description: `Antoine Piché is a FullStack Developer (Typescript) and VueJS enthusiast based in Paris`,
+  description: 'Antoine Piché is a FullStack Developer (Typescript) and VueJS enthusiast based in Paris',
   lang: 'en',
   display: 'standalone',
   theme_color: '#2eec96',
-}
+};
 
 const workbox = {
   dev: false,
@@ -16,6 +16,6 @@ const workbox = {
       handler: 'staleWhileRevalidate',
     },
   ],
-}
+};
 
-export default { manifest, workbox }
+export default { manifest, workbox };

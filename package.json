@@ -9,30 +9,32 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate --modern",
-    "deploy:staging": ". ./.deploy/build-staging.sh",
-    "deploy:prod": ". ./.deploy/build-production.sh",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "lint": "npx eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:fix": "yarn lint --fix",
+    "test:unit": "jest"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "nuxt": "^2.14.12",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "nuxt": "^2.15.8",
     "nuxt-property-decorator": "^2.7.2",
-    "velocity-animate": "^1.5.2"
+    "velocity-animate": "^1.5.2",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "~2.0.3",
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.2.0",
+    "@nuxt/types": "2.15.8",
+    "@nuxt/typescript-build": "~2.1.0",
+    "@nuxtjs/eslint-config": "^10.0.0",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/style-resources": "^1.0.0",
-    "@nuxt/types": "2.14.11",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-nuxt": "^0.5.2",
+    "eslint": "^8.21.0",
+    "eslint-plugin-nuxt": "^3.2.0",
+    "eslint-plugin-vue": "^9.3.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.1.1"
   }

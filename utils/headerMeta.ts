@@ -1,13 +1,13 @@
 export type headerMetaData = {
-  title: string,
-  image?: string,
-  description: string,
-  url?: string
-}
+  title: string;
+  image?: string;
+  description: string;
+  url?: string;
+};
 
-const defaultImage: string = '/images/fb_thumbnail.png'
+const defaultImage = '/images/fb_thumbnail.png';
 
-export function initHeaderMeta (headerData: headerMetaData): any[] {
+export function initHeaderMeta(headerData: headerMetaData): any[] {
   return [
     { hid: 'title', name: 'title', content: headerData.title || '' },
     { hid: 'description', name: 'description', content: headerData.description || '' },
@@ -22,7 +22,7 @@ export function initHeaderMeta (headerData: headerMetaData): any[] {
     { hid: 'og:image', property: 'og:image', content: headerData.image || defaultImage },
     { hid: 'og:title', property: 'og:title', content: headerData.title || '' },
     { hid: 'og:type', property: 'og:type', content: 'website' },
-  ]
+  ];
 }
 
-export { defaultImage }
+export { defaultImage };
